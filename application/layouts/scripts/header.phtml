@@ -1,0 +1,57 @@
+<div id="header" class="mod-con">
+      	
+      	<a href="<?php echo $this->url(array(),'default',true) ?>"><img class="logoSite" src="<?php echo $this->baseUrl('image/automonp/automobilesmontplaisir-logo.png')?>" alt="logo garage automobiles monplaisir lyon 8"/></a>
+      	<div class="headTitle">
+      		<!-- <a href="<?php echo $this->url(array(),'default',true) ?>">
+      			<img src="<?php echo $this->baseUrl('image/automonp/title-automonp.png')?>" alt="garage automobiles monplaisir lyon 8">
+      		</a>-->
+      		
+      		<a href="<?php echo $this->url(array(),'default',true) ?>">
+      			<h1 class="headSubTitle">Garage Automobiles Monplaisir - Lyon 8</h1>
+      		</a>
+      		
+      	</div>
+      	
+      	
+      	      	<div class="header-bloc-contact">
+			<div class="blc-tel">
+				<a href="<?php echo $this->url(array(),'contact',true) ?>"><img src="<?php echo $this->baseUrl('image/automonp/icon_phone.png')?>" alt="picto contact"><br /></a> Contactez-Nous :<br /><strong><a href="<?php echo $this->url(array(),'contact',true) ?>">04 78 76 80 80</a></strong>
+			</div>
+			<div class="blc-rdv">
+				<a href="<?php echo $this->url(array(),'rendezvous',true) ?>"><img src="<?php echo $this->baseUrl('image/automonp/icon_calendar.png')?>" alt="picto rendez-vous"><br /></a>Demande de Rendez-Vous ? <br /><strong><a href="<?php echo $this->url(array(),'rendezvous',true) ?>">Cliquez ici</a></strong>
+			</div>
+		</div>
+      	
+      	<div class="top-menu">
+      		<a href="<?php echo $this->url(array('controller'=>'service','action'=>'entretien'),'default',true) ?>">
+	      		<dl class="item-menu <?php if($this->currentMenu == 'ENT'): ?>selected<?php endif;?>">
+				<dt><img src="<?php echo $this->baseUrl('image/automonp/entrev.png')?>" alt="picto entretien revision"></dt>
+				<dd class="menu-titre">Entretien / Révision</dd>
+				</dl>
+			</a>
+			<a href="<?php echo $this->url(array('controller'=>'service','action'=>'mecanique'),'default',true) ?>">
+	      		<dl class="item-menu <?php if($this->currentMenu == 'MEC'): ?>selected<?php endif;?>">
+				<dt><img src="<?php echo $this->baseUrl('image/automonp/meca.png')?>" alt="picto mecanique"></dt>
+				<dd>Mécanique</dd>
+				</dl>
+			</a>
+			<a href="<?php echo $this->url(array('controller'=>'vehicule'),'default',true) ?>">
+				<dl class="item-menu <?php if($this->currentMenu == 'VEH'): ?>selected<?php endif;?>">
+				<dt><img src="<?php echo $this->baseUrl('image/automonp/vovn.png')?>" alt="picto vehicules occasions et neufs"></dt>
+				<dd>Véhicules Occasions / Neufs</dd>
+				</dl>
+			</a>
+			<a href="<?php echo $this->url(array('controller'=>'service','action'=>'autres'),'default',true) ?>">
+				<dl class="item-menu <?php if($this->currentMenu == 'AUT'): ?>selected<?php endif;?>" style="border:none;">
+				<dt><img src="<?php echo $this->baseUrl('image/automonp/autrepresta.png')?>" alt="picto autres prestations"></dt>
+				<dd class="menu-titre">Autres Préstations</dd>
+				</dl>
+			</a>
+			
+      	</div>
+      	
+
+
+
+</div>
+

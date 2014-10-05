@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link type="image/png" href="<?php echo $this->baseUrl('image/automonp/favicon.png')?>" rel="icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="robots" content="index,follow" />
+<meta name="keywords" content="auto automobile automobiles voiture véhicule lyon lyon 8 monplaisir garage atelier entretien révision occasion neuf" />
+<meta name="description" content="Le garage Automobiles Monplaisir à Lyon 8 vous accueille dans son atelier pour toutes réparations : mécanique, pneumatique, climatisation, pare-brise, carrosserie. Nous proposons également l'entretien et la révision de votre véhicule et la vente de véhicules neufs ou d'occasions." />
+<?php echo $this->headTitle('Garage Automobiles Monplaisir - Lyon 8') ?>
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDyaT28hHyLxs-uGcKc_VSy9mHhfxZqBqs&sensor=false"></script>
+
+<?php echo $this->headLink()->setStylesheet($this->baseUrl('css/style.css')) ?>
+<?php echo $this->headLink()->setStylesheet($this->baseUrl('css/jquery-ui-1.8.16.custom.css')) ?>
+<?php echo $this->headLink()->setStylesheet($this->baseUrl('css/jquery.lightbox-0.5.css')) ?>
+
+<?php echo $this->headScript()->setFile($this->baseUrl('js/jquery-1.7.min.js','text/javascript')) ?>
+<?php echo $this->headScript()->setFile($this->baseUrl('js/jquery-ui-1.8.16.custom.min.js','text/javascript')) ?>
+<?php echo $this->headScript()->setFile($this->baseUrl('js/common.js','text/javascript')) ?>
+<?php echo $this->headScript()->setFile($this->baseUrl('js/jquery.validate.min.js','text/javascript')) ?>
+<?php echo $this->headScript()->setFile($this->baseUrl('js/jquery.lightbox-0.5.min.js','text/javascript')) ?>
+<?php echo $this->headScript()->setFile($this->baseUrl('js/automonp.js','text/javascript')) ?>
+
+<!--[if IE]>
+<link type="text/css" href="css/ie.css" rel="stylesheet" media="screen" />
+<![endif]-->
+<!--[if IE 6]>
+<script type="text/javascript" src="js/pngfix.js"></script>
+<script type="text/javascript"> DD_belatedPNG.fix('img,#logo,.slide-menu');</script> 
+<![endif]-->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28146332-1']);
+  _gaq.push(['_setDomainName', 'automonplaisir.fr']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="top-bar-wrap">
+  <div id="top-bar" class="mod-con">
+    <div class="links">
+    <a href="<?php echo $this->url(array(),'default',true) ?>">Accueil</a> | 
+    <a href="<?php echo $this->url(array(),'contact',true) ?>">Contactez-Nous</a> | 
+    <a href="<?php echo $this->url(array(),'rendezvous',true) ?>">Demande de Rendez-Vous en Ligne</a> | 
+    <a href="<?php echo $this->url(array(),'plan',true) ?>">Plan d'Accès</a>
+    </div>
+    <div class="search" style="display:none">
+      <input type="text" value="Recherche" name="" />
+      <button type="submit" class="btn">OK</button>
+    </div>
+    <div style="display:block" class="rft">
+    	<a target="_blank" class="facebook" href="http://www.facebook.com/pages/Automobiles-Monplaisir/234686173283646"></a>
+    	<a target="_blank" class="twitter" href="https://twitter.com/AutoMonplaisir"></a>
+    </div>
+  </div>
+</div>
+<div class="main-bg">
+	<?php echo (isset($this->typePage) && $this->typePage == 'HOME') ? '<div id="home-page" class="main-wrap">' : '<div id="sub-page" class="main-wrap">' ?>
+ 
+    <?php echo $this->partial('header.phtml',array('currentMenu' => $this->currentMenu)); ?>
+    
+    <?php
+    	if(isset($this->typePage) && $this->typePage == 'HOME'){
+    		echo $this->partial('slideshow.phtml');
+    	}
+    ?>
+    
+    <div id="main" class="mod-con">
+    	<?php echo $this->layout()->content;?>
+    </div>
+
+  </div>
+</div>
+	<?php echo $this->partial('footer.phtml');?>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+</body>
+</html>

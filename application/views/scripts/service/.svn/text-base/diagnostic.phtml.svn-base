@@ -1,0 +1,63 @@
+      <div class="container clearfix">
+        <div id="default-page" class="main-con">
+          <div class="title-nav">
+            <h2 style="background-position:0 -382px">Diagnostic Electronique</h2>
+          </div>
+          <div class="content" style="margin-bottom:50px">
+            <div class="divpic">
+            	<img src="<?php echo $this->baseUrl('image/automonp/diagnostique1.jpg')?>" alt="diagnostic electronique voiture" class="pic"/>
+            	<img src="<?php echo $this->baseUrl('image/automonp/diagnostique2.jpg')?>" alt="diagnostic electronique voiture" class="pic"/>
+            </div>
+            
+<div>
+
+<p class="blc-txt">
+	<p>
+	Les véhicules de nouvelle génération regorgent de boitiers électroniques qui peuvent parfois
+	dépasser la puissance de certains ordinateurs. Ces boitiers sont reliés entre eux et s’échangent des
+	informations en provenance des différents systèmes électriques du véhicule. Beaucoup de fonctions
+	d’un véhicule dépendent donc directement du bon fonctionnement de ces boitiers.
+	</p>
+	<br/>
+	<p>
+	Les calculateurs sont munis d’un système d’autodiagnostic, ils testent chaque élément et enregistrent
+	toutes les anomalies détectées, même sporadiques.<br/>
+	En fonction de l’anomalie rencontrée, le calculateur allume ou non le témoin lié au système défaillant.
+	C’est pourquoi il est important de lire, d’analyser puis d’effacer ces mémoires (même si aucun voyant
+	n’est allumé) à chaque révision afin d’anticiper une panne potentielle.<br/>
+	Nous sommes formé et équipé d’outils de diagnostic multimarques leur permettant de lire les
+	boîtiers électroniques de tous les modèles.
+	</p>
+</p>
+
+<br/>
+
+<div id="accordion">
+	<h3><a href="#"><strong>Conseils de Pros</strong></a></h3>
+	<div>
+		<p>
+		Depuis la fin des années 90, l’introduction de l’électronique a permis d’améliorer les performances des
+		véhicules en terme de sécurité, de consommation et de confort.<br/>
+		En contrepartie, la défaillance d’une seule pièce reliée à l’un des calculateurs peut entraîner des
+		désagréments de confort, une surconsommation, l’allumage de témoins au tableau de bord et
+		l’immobilisation totale du véhicule.
+		</p>
+	</div>
+</div>
+
+</div>
+
+          </div>
+          
+        </div>
+        
+        <?php echo $this->partial('commun/sidebar.phtml') ?>
+
+      </div>
+    
+    <script>
+	$(function() {
+		$( "#accordion" ).accordion();
+	});
+	</script>
+    

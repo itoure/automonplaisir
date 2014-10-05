@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn-recette-automonplaisir/!svn/ver/1/tests
+END
+bootstrap.php
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn-recette-automonplaisir/!svn/ver/1/tests/bootstrap.php
+END
+phpunit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn-recette-automonplaisir/!svn/ver/1/tests/phpunit.xml
+END

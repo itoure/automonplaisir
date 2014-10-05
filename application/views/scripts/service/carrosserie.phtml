@@ -1,0 +1,48 @@
+      <div class="container clearfix">
+        <div id="default-page" class="main-con">
+          <div class="title-nav">
+            <h2 style="background-position:0 -382px">Carrosserie</h2>
+          </div>
+          <div class="content" style="margin-bottom:50px">
+         			
+            <div class="divpic">
+            <img src="<?php echo $this->baseUrl('image/automonp/carrosserie2.jpg')?>" alt="carrosserie voiture" class="pic"/>
+            <img src="<?php echo $this->baseUrl('image/automonp/carrosserie1.jpg')?>" alt="carrosserie voiture" class="pic"/>
+            </div>
+			
+			<div>
+				<p class="blc-txt">
+					La protection de la carrosserie est essentielle dans l’entretien de votre véhicule. La réparation de la carrosserie
+					permet de conserver à la fois la garantie du constructeur mais aussi de préserver le capital esthétique de la
+					carrosserie.
+				</p>
+				
+				<div id="accordion">
+					<h3><a href="#"><strong>Conseils de Pros</strong></a></h3>
+					<div>
+						<p>
+						Les risques encourus :<br/>
+						<span class="blue">&bull;</span> Diminution importante de la sécurité des occupants du véhicule.<br/>
+						<span class="blue">&bull;</span> Corrosion et dégradation du châssis entraînant des frais plus importants de réparation carrosserie.<br/>
+						<span class="blue">&bull;</span> Selon les dommages, une contre-visite au contrôle technique.<br/>
+						<span class="blue">&bull;</span> Une baisse du prix lors de la vente du véhicule due à un aspect négligé entrainant un coût de remise en état
+						élevé.
+						</p>
+					</div>
+				</div>
+			</div>
+
+
+          </div>
+          
+        </div>
+        
+        <?php echo $this->partial('commun/sidebar.phtml') ?>
+
+      </div>
+      
+      <script>
+		$(function() {
+			$( "#accordion" ).accordion();
+		});
+	  </script>

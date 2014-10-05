@@ -1,0 +1,54 @@
+	<div class="container clearfix">
+		<div id="default-page" class="main-con">
+			<div class="title-nav">
+				<h2 style="background-position:0 -279px">Le Contrôle Technique</h2>
+			</div>
+		<div class="content" style="margin-bottom:50px;font-size:13px">
+		
+			<div class="divpic" style="margin-bottom:30px">
+			<img src="<?php echo $this->baseUrl('image/automonp/controletech1.jpg')?>" alt="contrôle technique" class="pic"/>
+			<img src="<?php echo $this->baseUrl('image/automonp/controletech2.jpg')?>" alt="contrôle technique" class="pic"/>
+			</div>			
+				
+			<p class="blc-txt">
+				<strong class="blue">Le contrôle technique</strong> (CT) est un contrôle visuel, effectué sans démontage, portant sur
+				les organes essentiels du véhicule liés à la sécurité et à l'environnement.<br/>
+				Le premier Contrôle Technique de votre véhicule doit obligatoirement être effectué dans
+				les six mois précédant le 4ème anniversaire de la mise en circulation de votre véhicule.
+				Les contrôles suivants s’effectuent tous les deux ans.
+			</p>
+			<p class="blc-txt">
+				Nous avons mis en place un service de pré-contrôle technique <strong class="blue">GRATUIT</strong> qui permet de
+				contrôler et préparer votre véhicule avant le passage au centre agréé partenaire de notre
+				garage (Securitest).
+			</p>
+			<p class="blc-txt">
+				Grâce au pré-contrôle technique <strong class="blue">GRATUIT</strong>, vous vous débarrassez des contraintes du
+				Contrôle Technique et réduisez le risque d’une contre-visite.
+			</p>
+			<p class="blc-txt">
+				La réalisation de votre contrôle technique par notre intermédiaire vous fait bénéficier
+				de nombreux avantages :
+			</p>
+				
+			<dl>
+				<dt><span class="blue">&bull;</span> Aucun surcoût sur le tarif du contrôle technique</dt>
+				<dt><span class="blue">&bull;</span> Bilan visuel avant passage au contrôle technique avec détection préalable des points de contre-visite</dt>
+				<dt><span class="blue">&bull;</span> Contre-visite gratuite dans un délai de 2 mois</dt>
+				<dt><span class="blue">&bull;</span> Convoyage gratuit de votre véhicule au centre de contrôle technique</dt>
+				<dt><span class="blue">&bull;</span> Devis de remise en état le cas échéant avant le passage de votre véhicule au contrôle technique</dt>
+			</dl>
+
+          </div>
+          </div>
+        
+        <?php echo $this->partial('commun/sidebar.phtml') ?>
+
+      </div>
+	
+	<script>
+	$(function() {
+		$( "#accordion" ).accordion();
+		$( "input:submit, a, button", ".demo" ).button();
+	});
+	</script>

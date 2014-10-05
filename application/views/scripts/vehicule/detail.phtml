@@ -1,0 +1,84 @@
+<div class="container clearfix">
+
+	<div id="default-page" class="main-con">
+		<div class="title-nav">
+			<h2 style="background-position:0 -433px"><?php echo $this->vehOccasion['libMarque'].' / '.$this->vehOccasion['libModele'].' / '.$this->vehOccasion['prix'].' €' ?></h2>
+		</div>
+		<div class="content">
+			
+		<div style="text-align:center;margin-bottom:35px" class="backList">
+			<a href="<?php echo $this->url(array('controller'=>'vehicule','action'=>'occasion'),'default',true) ?>"><< Retour Liste</a>
+			<a href="<?php echo $this->url(array(),'contact',true) ?>">Contactez-Nous >></a>
+		</div>	
+				
+			<div class="detail-gallery">
+				<a class="lightbox" href="<?php echo $this->baseUrl('image/voiture-occasion/photos/'.$this->vehOccasion['main_photo'])?>"><img class="detail-main-pic" src="<?php echo $this->baseUrl('image/voiture-occasion/photos/'.$this->vehOccasion['main_photo'])?>" alt=""/></a>
+				<div>
+					<?php if($this->vehOccasion['photo_2']):?><a class="lightbox" href="<?php echo $this->baseUrl('image/voiture-occasion/photos/'.$this->vehOccasion['photo_2'])?>"><img class="detail-supp-pic" src="<?php echo $this->baseUrl('image/voiture-occasion/photos/'.$this->vehOccasion['photo_2'])?>" alt=""/></a><?php endif;?>
+					<?php if($this->vehOccasion['photo_3']):?><a class="lightbox" href="<?php echo $this->baseUrl('image/voiture-occasion/photos/'.$this->vehOccasion['photo_3'])?>"><img class="detail-supp-pic" src="<?php echo $this->baseUrl('image/voiture-occasion/photos/'.$this->vehOccasion['photo_3'])?>" alt=""/></a><?php endif;?>
+					<?php if($this->vehOccasion['photo_4']):?><a class="lightbox" href="<?php echo $this->baseUrl('image/voiture-occasion/photos/'.$this->vehOccasion['photo_4'])?>"><img class="detail-supp-pic" src="<?php echo $this->baseUrl('image/voiture-occasion/photos/'.$this->vehOccasion['photo_4'])?>" alt=""/></a><?php endif;?>
+				</div>
+			</div>
+			
+			<table border="2" class="table-detail-occasion">
+				
+				<tbody class="tbody-detail-occasion">
+					<tr><td class="label">Marque</td><td><?php echo $this->vehOccasion['libMarque'] ?></td></tr>
+					<tr><td class="label">Gamme</td><td><?php echo $this->vehOccasion['libModele'] ?></td></tr>
+					<tr><td class="label">Modèle</td><td><?php echo $this->vehOccasion['version'] ?></td></tr>
+					<tr><td class="label">Prix</td><td><?php echo $this->vehOccasion['prix'] ?> €</td></tr>
+					<tr><td class="label">Kilometrage</td><td><?php echo $this->vehOccasion['kilometrage'] ?> Km</td></tr>
+					<tr><td class="label">Année</td><td><?php echo $this->vehOccasion['annee'] ?></td></tr>
+					<tr><td class="label">Type</td><td><?php echo $this->vehOccasion['libType'] ?></td></tr>
+					<tr><td class="label">Portes</td><td><?php echo $this->vehOccasion['libPorte'] ?></td></tr>
+					<tr><td class="label">Energie</td><td><?php echo $this->vehOccasion['libEnergie'] ?></td></tr>
+					<tr><td class="label">Transmission</td><td><?php echo $this->vehOccasion['libTrans'] ?></td></tr>
+					<tr><td class="label">Puissance</td><td><?php echo $this->vehOccasion['puissance'] ?> CV</td></tr>
+				</tbody>
+			
+			</table>
+			
+		</div>
+		
+		<div style="margin-bottom: 30px">
+			<strong>Equipements :</strong>
+			<p><?php echo $this->vehOccasion['equipements'] ?></p>
+		</div>
+		
+		<div>
+			<strong>Description :</strong>
+			<p><?php echo $this->vehOccasion['description'] ?></p>
+		</div>
+		
+		<div style="text-align:center;margin-top:100px" class="backList">
+			<a href="<?php echo $this->url(array('controller'=>'vehicule','action'=>'occasion'),'default',true) ?>"><< Retour Liste</a>
+			<a href="<?php echo $this->url(array(),'contact',true) ?>">Contactez-Nous >></a>
+		</div>
+		
+	</div>
+        
+	<?php echo $this->partial('commun/sidebar.phtml') ?>
+
+</div>
+
+
+<script type="text/javascript">
+<!--
+
+$(function() {
+	$( "a", ".backList" ).button();
+
+	$('a.lightbox').lightBox({
+		fixedNavigation:true,
+		txtImage: 'Photo',
+		txtOf: 'de',
+		imageLoading: '<?php echo $this->baseUrl('image/lightbox-ico-loading.gif')?>',
+		imageBtnClose: '<?php echo $this->baseUrl('image/lightbox-btn-close.jpg')?>',
+		imageBtnPrev: '<?php echo $this->baseUrl('image/lightbox-btn-prev.jpg')?>',
+		imageBtnNext: '<?php echo $this->baseUrl('image/lightbox-btn-next.jpg')?>',
+		});
+});
+
+//-->
+</script>
+

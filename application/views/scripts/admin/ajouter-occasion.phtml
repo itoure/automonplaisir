@@ -1,0 +1,202 @@
+<div style="padding: 0 15px">
+       			<form enctype="multipart/form-data" name="formVehiculeNeuf" id="formVehiculeNeuf" action="<?php echo $this->url(array('controller'=>'admin','action'=>'validation-ajout-occasion'),'default',true) ?>" method="post">
+       				<div class="titre">Ajout Véhicule Occasion</div>
+					
+					<?php if($this->isModif):?>
+						<input type="hidden" value="<?php echo $this->isModif ?>" name="isModif" id="isModif">
+						<input type="hidden" value="<?php echo $this->vehOccasion->id_occasion ?>" name="idOccasion" id="idOccasion">
+					<?php endif;?>
+					
+					<div class="elmt-form">
+						<label class="labelForm">Marque <span class="red">*</span></label>
+						<select id="marque" name="marque">
+							<option value=""></option>
+							<?php foreach($this->optionsMarque as $k => $m): ?>
+							<option value="<?php echo $k ?>" <?php if($this->isModif && $this->vehOccasion->code_marque == $k):?>selected<?php endif;?>><?php echo $m ?></option>
+							<?php endforeach; ?>
+						</select>
+					</div>
+
+					<div id="listeModele">
+						<?php if($this->isModif):?>
+						<div class="elmt-form">
+							<label class="labelForm">Gamme <span class="red">*</span></label>
+							<select id="modele" name="modele">
+								<option value=""></option>
+								<?php foreach($this->optionsModele as $k => $m): ?>
+								<option value="<?php echo $k ?>" <?php if($this->isModif && $this->vehOccasion->code_modele == $k):?>selected<?php endif;?>><?php echo $m ?></option>
+								<?php endforeach; ?>
+							</select>
+						</div>
+						<?php endif;?>
+					</div>
+					
+					<div id="formAjoutOccasion" <?php if(!$this->isModif):?>style="display:none"<?php endif;?>>
+						
+						<div class="elmt-form">
+							<label class="labelForm">Modèle <span class="red">*</span></label>
+							<input type=text id="version" name="version" value="<?php if($this->isModif) echo $this->vehOccasion->version ?>" size="47">
+						</div>
+						
+						<div class="elmt-form">
+							<label class="labelForm">Type <span class="red">*</span></label>
+							<select id="type" name="type">
+								<option value=""></option>
+								<?php foreach($this->optionsType as $k => $t): ?>
+								<option value="<?php echo $k ?>" <?php if($this->isModif && $this->vehOccasion->id_type == $k):?>selected<?php endif;?>><?php echo $t ?></option>
+								<?php endforeach; ?>
+							</select>
+						</div>
+						<div class="elmt-form">
+							<label class="labelForm">Portes <span class="red">*</span></label>
+							<select id="porte" name="porte">
+								<option value=""></option>
+								<?php foreach($this->optionsPorte as $k => $t): ?>
+								<option value="<?php echo $k ?>" <?php if($this->isModif && $this->vehOccasion->id_porte == $k):?>selected<?php endif;?>><?php echo $t ?></option>
+								<?php endforeach; ?>
+							</select>
+						</div>
+						<div class="elmt-form">
+							<label class="labelForm">Energie <span class="red">*</span></label>
+							<select id="energie" name="energie">
+								<option value=""></option>
+								<?php foreach($this->optionsEnergie as $k => $e): ?>
+								<option value="<?php echo $k ?>" <?php if($this->isModif && $this->vehOccasion->id_energie == $k):?>selected<?php endif;?>><?php echo $e ?></option>
+								<?php endforeach; ?>
+							</select>
+						</div>
+						<div class="elmt-form">
+							<label class="labelForm">Transmission <span class="red">*</span></label>
+							<select id="transmission" name="transmission">
+								<option value=""></option>
+								<?php foreach($this->optionsTrans as $k => $tr): ?>
+								<option value="<?php echo $k ?>" <?php if($this->isModif && $this->vehOccasion->id_trans == $k):?>selected<?php endif;?>><?php echo $tr ?></option>
+								<?php endforeach; ?>
+							</select>
+						</div>
+						<div class="elmt-form">
+							<label class="labelForm">Année <span class="red">*</span></label>
+							<input type=text id="annee" name="annee" value="<?php if($this->isModif) echo $this->vehOccasion->annee ?>" maxlength="4">
+						</div>
+						<div class="elmt-form">
+							<label class="labelForm">Prix (€) <span class="red">*</span></label>
+							<input type=text id="prix" name="prix" value="<?php if($this->isModif) echo $this->vehOccasion->prix ?>">
+						</div>
+						<div class="elmt-form">
+							<label class="labelForm">Kilometrage (Km) <span class="red">*</span></label>
+							<input type=text id="kilometrage" name="kilometrage" value="<?php if($this->isModif) echo $this->vehOccasion->kilometrage ?>">
+						</div>
+						<div class="elmt-form">
+							<label class="labelForm">Puissance (CV) <span class="red">*</span></label>
+							<input type=text id="puissance" name="puissance" value="<?php if($this->isModif) echo $this->vehOccasion->puissance ?>" maxlength="2">
+						</div>
+						<div class="elmt-form">
+							<label class="labelForm">Equipements <span class="red">*</span></label>
+							<textarea rows="4" cols="40" id="equipements" name="equipements" style="vertical-align:middle;"><?php if($this->isModif) echo $this->vehOccasion->equipements ?></textarea>
+						</div>
+						<div class="elmt-form">
+							<label class="labelForm">Description <span class="red">*</span></label>
+							<textarea rows="4" cols="40" id="desc" name="desc" style="vertical-align:middle;"><?php if($this->isModif) echo $this->vehOccasion->description ?></textarea>
+						</div>
+						<div class="elmt-form">
+							<label class="labelForm">Photo Principal <span class="red">*</span></label>
+							<input type=file id="main_photo" name="main_photo">
+							<?php if($this->isModif):?><img style="vertical-align: middle" src="<?php echo $this->baseUrl('image/voiture-occasion/photos/'.$this->vehOccasion->main_photo)?>" width="50px"><?php endif;?>
+						</div>
+						<div class="elmt-form">
+							<label class="labelForm">Photo 2</label>
+							<input type=file id="photo_2" name="photo_2">
+							<?php if($this->isModif):?><img style="vertical-align: middle" src="<?php echo $this->baseUrl('image/voiture-occasion/photos/'.$this->vehOccasion->photo_2)?>" width="50px"><?php endif;?>
+						</div>
+						<div class="elmt-form">
+							<label class="labelForm">Photo 3</label>
+							<input type=file id="photo_3" name="photo_3">
+							<?php if($this->isModif):?><img style="vertical-align: middle" src="<?php echo $this->baseUrl('image/voiture-occasion/photos/'.$this->vehOccasion->photo_3)?>" width="50px"><?php endif;?>
+						</div>
+						<div class="elmt-form">
+							<label class="labelForm">Photo 4</label>
+							<input type=file id="photo_4" name="photo_4">
+							<?php if($this->isModif):?><img style="vertical-align: middle" src="<?php echo $this->baseUrl('image/voiture-occasion/photos/'.$this->vehOccasion->photo_4)?>" width="50px"><?php endif;?>
+						</div>
+					</div>
+					
+					<p class="btnSubmit"><input type="submit" value="Ajouter"></p>
+					
+				</form>
+</div>
+
+
+<script type="text/javascript">
+<!--
+
+$('#marque').change(function() {
+	$.ajax({
+	  type: 'GET',
+	  url: '<?php echo $this->urlGetListeModeleByMarqueAjax ?>',
+	  data: 'code_marque='+this.value,
+	  success: function(data) {
+	    $('#listeModele').html(data);
+	    $('#formAjoutOccasion').show();
+	  }
+	});
+});
+
+$(function() {
+	
+	// fORMULAIRE VEHICULE NEUF
+	$("#formVehiculeNeuf").validate({
+	      rules: {
+	         "prix":{
+	            "required": true,
+	            "digits":true,
+	         },
+	         "kilometrage":{
+		        "required": true,
+		        "number":true,
+			 },
+			 "puissance":{
+		        "required": true,
+		        "number":true,
+		     },
+		     "annee":{
+		        "required": true,
+		        "number":true,
+		     },
+		     "marque":{
+		        "required": true,
+		     },
+		     "modele":{
+			    "required": true,
+			  },
+			  "type":{
+			     "required": true,
+			  },
+			  "porte":{
+		        "required": true,
+		     },
+		     "energie":{
+			    "required": true,
+			  },
+			  "transmission":{
+			     "required": true,
+			  },
+			  "desc":{
+			     "required": true,
+			  },
+			  "version":{
+				     "required": true,
+			  },
+			  "equipements":{
+				     "required": true,
+			  },
+			  "main_photo":{
+				"required": true,
+			  },
+	      }
+	  });
+	  
+});
+
+//-->
+</script>
+

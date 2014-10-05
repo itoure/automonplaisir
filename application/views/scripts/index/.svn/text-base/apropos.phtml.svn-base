@@ -1,0 +1,39 @@
+<div class="title-bloc">A Propos De Nous</div>
+
+<div class="bloc-g">
+	<p style="margin-bottom:20px" class="blc-txt">
+		La Sarl <strong>AUTOMOBILES MONPLAISIR</strong> au capital social de 10 000 Euros inscrite au RCS de Lyon
+		538 439 050 000 13. La société se situe au 42 rue Villon (Angle rue Saint Nestor) à Lyon
+		8ème en plein cœur du quartier de Monplaisir lumière.
+	</p>
+	<p style="margin-bottom:30px" class="blc-txt">
+		Le <strong>garage AUTOMOBILES MONPLAISIR</strong> est présent sur le quartier de Monplaisir lumière depuis
+		1998. Il propose à ses clients ses services d’entretien, de mécanique et de carrosserie
+		automobile. La société propose aussi des véhicules d’occasions et neufs toutes marques tout
+		au long de l’année.
+	</p>
+	
+	<div class="div-photo-garage">
+		<img style="width:80%" src="<?php echo $this->baseUrl('image/automonp/photo-garage.jpg')?>" alt="photo garage automobiles monplaisir" class="pic-photo-garage"/>
+	</div>
+</div>
+
+<div class="bloc-d">
+	<div style="margin-bottom:20px">
+		<p class="blc-txt">
+	       	<ul>
+				<li style="font-size: 14px;"><strong>Garage AUTOMOBILES MONPLAISIR</strong></li>
+				<li>42 Rue Villon (angle rue St Nestor)</li>
+				<li>69008, Lyon</li>
+				<li>Tél: 04 78 76 80 80</li>
+				<li>Fax: 04 78 76 65 78</li>
+				<li>Email: contact@automonplaisir.fr</li>
+			</ul>
+		</p>
+		<img style="width:80%" src="<?php echo $this->baseUrl('image/automonp/horaires.jpg')?>" alt="horaires garage automobiles monplaisir" class="pic-horaire"/>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+</script>

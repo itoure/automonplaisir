@@ -1,0 +1,45 @@
+<div>
+	<table border="2" class="table-neuf">
+	<caption>Liste Véhicules Occasions</caption>
+		<thead class="thead-neuf">
+			<tr>
+				<th>Marque</th>
+				<th>Modele</th>
+				<th>Prix</th>
+				<th>Km</th>
+				<th>Année</th>
+				<th>Type</th>
+				<th>Portes</th>
+				<th>Energie</th>
+				<th>Transmission</th>
+				<th>Puissance</th>
+				<th>Equipements</th>
+				<th>Description</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		
+		
+		<?php foreach ($this->listeToDisplay as $vehOccasion): ?>
+		<tbody class="tbody-neuf">
+			<tr>
+				<td><?php echo $vehOccasion['libMarque'] ?></td>
+				<td><?php echo $vehOccasion['libModele'] ?></td>
+				<td><?php echo $vehOccasion['prix'] ?></td>
+				<td><?php echo $vehOccasion['kilometrage'] ?></td>
+				<td><?php echo $vehOccasion['annee'] ?></td>
+				<td><?php echo $vehOccasion['libType'] ?></td>
+				<td><?php echo $vehOccasion['libPorte'] ?></td>
+				<td><?php echo $vehOccasion['libEnergie'] ?></td>
+				<td><?php echo $vehOccasion['libTrans'] ?></td>
+				<td><?php echo $vehOccasion['puissance'] ?></td>
+				<td><?php echo $vehOccasion['equipements'] ?></td>
+				<td><?php echo $vehOccasion['description'] ?></td>
+				<td><a href="<?php echo $this->url(array('controller'=>'admin','action'=>'supprimer','id'=>$vehOccasion['id_occasion'],'page'=>'occasion'),'default',true) ?>">S</a> | <a href="<?php echo $this->url(array('controller'=>'admin','action'=>'modifier-occasion','id'=>$vehOccasion['id_occasion']),'default',true) ?>">M</a></td>
+			</tr>
+		</tbody>
+		<?php endforeach; ?>
+	</table>
+	
+	<a href="<?php echo $this->url(array('controller'=>'admin','action'=>'ajouter-occasion'),'default',true) ?>">Ajouter un véhicule</a>
+</div>

@@ -1,0 +1,29 @@
+<div>
+	<table border="2" class="table-contact">
+		<caption>Liste Contact</caption>
+		<thead class="thead-contact">
+			<tr>
+				<th style="width:250px">Sujet</th>
+				<th style="width:400px">Message</th>
+				<th>Email</th>
+				<th>Téléphone</th>
+				<th>Date du message</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		
+		
+		<?php foreach ($this->listeMsg as $msg): ?>
+		<tbody class="tbody-contact">
+			<tr>
+				<td><?php echo $msg->sujet ?></td>
+				<td><?php echo $msg->message ?></td>
+				<td><?php echo $msg->email_contact ?></td>
+				<td>0<?php echo $msg->telephone_contact ?></td>
+				<td><?php echo date('d/m/Y',strtotime($msg->date_contact)) ?></td>
+				<td><a href="<?php echo $this->url(array('controller'=>'admin','action'=>'supprimer','id'=>$msg->id_contact, 'page'=>'contact'),'default',true) ?>">S</a></td>
+			</tr>
+		</tbody>
+		<?php endforeach; ?>
+	</table>
+</div>

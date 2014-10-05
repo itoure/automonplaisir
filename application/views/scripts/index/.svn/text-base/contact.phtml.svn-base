@@ -1,0 +1,101 @@
+<?php if (isset($this->flagEnvoi)): ?>
+<script type="text/javascript"> var displayMessage = true; </script>
+<?php else:?>
+<script type="text/javascript"> var displayMessage = false; </script>
+<?php endif; ?>
+
+<div id="dialog-message" title="Contactez Nous" style="display:none;">
+	<p>
+		<span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+		<?php foreach($this->messages as $msg): ?>
+			<div><?php echo $msg; ?></div>
+		<?php endforeach; ?>
+	</p>
+</div>
+
+<div class="title-bloc">Contactez-Nous</div>
+
+<div class="bloc-contact-g">
+	
+	<form id="formContact" name="formContact" method="post" action="<?php echo $this->url(array('controller'=>'index','action'=>'envoi-mail-contact'),'default',true) ?>">
+	
+		<div class="elmt-form">
+			<label class="labelForm">Sujet <span class="red">*</span></label>
+			<input type=text id="sujet" name="sujet" value="" size="50">
+		</div>
+		<div class="elmt-form">
+			<label class="labelForm">Message <span class="red">*</span></label>
+			<textarea style="vertical-align:middle;" id="message" name="message" cols="50" rows="10"></textarea>
+		</div>
+		<div class="elmt-form">
+			<label class="labelForm">Email <span class="red">*</span></label>
+			<input type=text id="email" name="email" value="" size="40">
+		</div>
+		<div class="elmt-form">
+			<label class="labelForm">Téléphone <span class="red">*</span></label>
+			<input type=text id="telephone" name="telephone" value="" size="40">
+		</div>
+		<div class="elmt-form" style="text-align: center">
+			<input onclick="" type="submit" value="Envoyer">
+		</div>
+	</form>
+</div>
+
+
+<div class="bloc-contact-d">
+	<p class="blc-txt">
+       	<ul>
+			<li style="width:345px;font-size:14px;"><strong>Garage AUTOMOBILES MONPLAISIR - Lyon</strong></li>
+			<li>42 Rue Villon (angle rue St Nestor)</li>
+			<li>69008, Lyon</li>
+			<li>Tél: 04 78 76 80 80</li>
+			<li>Fax: 04 78 76 65 78</li>
+			<li>Email: contact@automonplaisir.fr</li>
+		</ul>
+	</p>
+	<img src="<?php echo $this->baseUrl('image/automonp/horaires.jpg')?>" alt="horaires garage automobiles monplaisir" class="pic-horaire"/>
+</div>
+
+<script type="text/javascript">
+<!--
+
+$(function() {	
+
+	if(displayMessage){
+		$( "#dialog:ui-dialog" ).dialog( "destroy" );
+		$( "#dialog-message" ).dialog({
+			modal: true,
+			buttons: {
+				Ok: function() {
+					$( this ).dialog( "close" );
+				}
+			}
+		});
+	}
+	
+	$("input:submit", ".elmt-form").button();
+	
+	// fORMULAIRE CONTACT
+	$("#formContact").validate({
+	      rules: {
+	         "sujet":{
+	            "required": true,
+	         },
+	         "message":{
+		        "required": true,
+			 },
+			 "telephone":{
+		        "required": true,
+		        "number":true,
+		     },
+		     "email":{
+		        "required": true,
+		        "email":true,
+		     },
+	      }
+	  });
+		
+});
+
+//-->
+</script>

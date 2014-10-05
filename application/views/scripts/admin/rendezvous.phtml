@@ -1,0 +1,38 @@
+<div>
+	<table border="2" class="table-rdv">
+	<caption>Liste Rendez-Vous</caption>
+		<thead class="thead-rdv">
+			<tr>
+				<th>Nom</th>
+				<th>Prénom</th>
+				<th>Téléphone</th>
+				<th>Email</th>
+				<th>Date Souhaitée</th>
+				<th>Horaire Souhaité</th>
+				<th>Type Intervention</th>
+				<th>Description Véhicule</th>
+				<th>Immatriculation</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		
+		
+		<?php foreach ($this->listeRdv as $rdv): ?>
+		<tbody class="tbody-rdv">
+			<tr>
+				<td><?php echo $rdv->nom ?></td>
+				<td><?php echo $rdv->prenom ?></td>
+				<td><?php echo $rdv->telephone ?></td>
+				<td><?php echo $rdv->email ?></td>
+				<td><?php echo date('d/m/Y',strtotime($rdv->date_souhaitee)) ?></td>
+				<td><?php echo $this->plageHoraire->{$rdv->horaire_souhaite} ?></td>
+				<td><?php echo $rdv->type_intervention ?></td>
+				<td><?php echo $rdv->desc_vehicule ?></td>
+				<td><?php echo $rdv->immatriculation ?></td>
+
+				<td><a href="<?php echo $this->url(array('controller'=>'admin','action'=>'supprimer','id'=>$rdv->id_rendezvous, 'page'=>'rendezvous'),'default',true) ?>">S</a></td>
+			</tr>
+		</tbody>
+		<?php endforeach; ?>
+	</table>
+</div>

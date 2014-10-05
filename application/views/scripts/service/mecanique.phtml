@@ -1,0 +1,96 @@
+      <div class="container clearfix">
+        <div id="default-page" class="main-con">
+          <div class="title-nav">
+            <h2 style="background-position:0 -330px">Mecanique</h2>
+          </div>
+          <div class="content" style="margin-bottom:50px">
+          
+          	<p class="blc-txt">
+				<strong>Le Garage Automobiles Monplaisir</strong> prend en charge tous travaux de  mécanique automobile.<br/>
+				Notre équipe de mécaniciens automobile qualifiés et d’expérience seront répondre à tous vos besoins.
+			</p>
+			
+            <div class="divpic">
+            <img src="<?php echo $this->baseUrl('image/automonp/mecanique1.jpg')?>" alt="mecanique voiture" class="pic"/>
+            <img src="<?php echo $this->baseUrl('image/automonp/mecanique2.jpg')?>" alt="mecanique voiture" class="pic"/>
+            <img src="<?php echo $this->baseUrl('image/automonp/mecanique3.jpg')?>" alt="mecanique voiture" class="pic"/>
+            </div>
+			
+			<p class="blc-txt">
+				Vous trouverez ci-dessous certaines informations sur les interventions les plus courantes réalisés :
+			</p>
+			
+			<div>
+
+<div id="accordion">
+	<h3><a href="#">Allumage</a></h3>
+	<div>
+		<p>
+		Batteries, bougies, démarreurs et alternateurs :<br/>
+		Chez nous, vous trouverez tous les conseils et les services pour un démarrage efficace en toute saison.<br/>
+		Pour votre tranquillité, nos batteries sont garanties
+		</p>
+	</div>
+	<h3><a href="#">Echappement</a></h3>
+	<div>
+		<p>
+		Un bruit métallique sous la caisse ?<br/>
+		Une odeur suspecte émane de votre véhicule ?<br/>
+		Venez chez nous, pour un diagnostic et un remplacement rapide de la pièce nécessaire.
+		</p>
+	</div>
+	<h3><a href="#">Freins</a></h3>
+	<div>
+		<p>
+		Suivez les indications du carnet d’entretien de votre véhicule.<br/>
+		Tous les 20 000 km ou tous les 2 ans, les plaquettes de frein doivent être contrôlées.<br/>
+		Tous les 30 000 km ou tous les 2 ans, le liquide de frein doit être remplacé impérativement.<br/>
+		Tous les 50 000 km, chaque disque de frein ou tambour de frein doit être vérifié.<br/>
+		Avant chaque départ en vacances, le système de freinage doit être vérifié et le niveau de liquide de frein contrôlé.<br/>
+		Nous vérifions aussi l’état des amortisseurs et des pneumatiques qui influent sur la performance du freinage.<br/>
+		</p>
+	</div>
+	<h3><a href="#">Distribution</a></h3>
+	<div>
+		<p>
+		Une distribution non entretenue entraîne systématiquement une casse de votre moteur ! Mais savez-vous quand vous devez la changer ?<br/>
+		Venez donc chez nous pour vous en assurer et pour que votre auto continue à vous accompagner très longtemps.
+		</p>
+	</div>
+	<h3><a href="#">Embrayage</a></h3>
+	<div>
+		<p>
+		Le système d’embrayage transmet la force du moteur vers la boîte de vitesses. Il permet le passage des vitesses
+		et l’immobilisation du véhicule sans couper le moteur. L’embrayage doit être progressif pour des démarrages et
+		des changements de vitesses confortables.<br/>
+		Lorsque votre embrayage est à commande hydraulique, c’est le liquide de frein qui alimente le système. Le
+		réservoir de liquide est commun à celui des freins. Il est important de remplacer ce liquide tous les deux ans.<br/>
+		Lorsque votre embrayage est à commande mécanique par câble, il n’est peut être pas pourvu d’un système de
+		rattrapage d’usure du disque. Dans ce cas, un réglage périodique est nécessaire.<br/>
+		Votre <strong>Garage AUTOMOBILES MONPLAISIR</strong> peut effectuer un contrôle régulier tous les 40.000 km.
+		</p>
+	</div>
+	<h3><a href="#">Autre Mécanique</a></h3>
+	<div>
+		<p>
+		Notre savoir-faire pour votre véhicule :<br/> Courroies – Roulements - Soufflets de transmission - Compresseurs de climatisation - Radiateurs. 
+		</p>
+	</div>
+</div>
+
+</div>
+
+
+          </div>
+          
+        </div>
+        
+        <?php echo $this->partial('commun/sidebar.phtml') ?>
+
+      </div>
+    
+    <script>
+	$(function() {
+		$( "#accordion" ).accordion();
+	});
+	</script>

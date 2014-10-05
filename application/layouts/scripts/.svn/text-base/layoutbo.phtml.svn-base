@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Admin AutoMonp</title>
+
+<?php echo $this->headLink()->appendStylesheet($this->baseUrl('css/style-bo.css')) ?>
+
+<?php echo $this->headScript()->appendFile($this->baseUrl('js/jquery-1.7.min.js','text/javascript')) ?>
+<?php echo $this->headScript()->appendFile($this->baseUrl('js/jquery-ui-1.8.16.custom.min.js','text/javascript')) ?>
+<?php echo $this->headScript()->appendFile($this->baseUrl('js/common.js','text/javascript')) ?>
+<?php echo $this->headScript()->setFile($this->baseUrl('js/jquery.validate.min.js','text/javascript')) ?>
+<?php echo $this->headScript()->setFile($this->baseUrl('js/automonp.js','text/javascript')) ?>
+
+</head>
+
+<body>
+
+<div class="title-bo">ADMINISTRATION AUTOMONP</div>
+
+<?php if ($this->isConnected): ?>
+<div class="menu">
+	<a href="<?php echo $this->url(array('controller'=>'admin','action'=>'contact'),'default',true) ?>">Liste Contact</a> | 
+	<a href="<?php echo $this->url(array('controller'=>'admin','action'=>'rendezvous'),'default',true) ?>">Liste Rendez-Vous</a> | 
+	<a href="<?php echo $this->url(array('controller'=>'admin','action'=>'occasion'),'default',true) ?>">Gestion Véhicules Occasions</a> |
+	<a href="<?php echo $this->url(array('controller'=>'admin','action'=>'neuf'),'default',true) ?>">Commandes Véhicules Neufs</a>
+	<span style="float: right"><a  href="<?php echo $this->url(array('controller'=>'admin','action'=>'deconnexion'),'default',true) ?>">Deconnexion</a> | <a href="<?php echo $this->url(array(),'default',true) ?>">Retour Site</a></span>
+</div>
+<?php endif; ?>
+
+<div class="messages">
+	<?php if($this->messages): ?>
+	<?php foreach($this->messages as $msg): ?>
+		<div><?php echo $msg; ?></div>
+	<?php endforeach; ?>
+	<?php endif; ?>
+</div>
+
+<?php echo $this->layout()->content;?>
+
+</body>
+</html>

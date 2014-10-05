@@ -1,0 +1,66 @@
+      <div class="container clearfix">
+        <div id="default-page" class="main-con">
+          <div class="title-nav">
+            <h2 style="background-position:0 -382px">Autres Prestations</h2>
+          </div>
+          <div class="content">
+            
+			<dl class="listeAutresPresta">  
+                <dt>
+                	<a href="<?php echo $this->url(array('controller'=>'service','action'=>'pneumatique'),'default',true) ?>">
+	                	<img src="<?php echo $this->baseUrl('image/automonp/pneu.jpg')?>" alt="pneumatique voiture"/>
+	                	<h3>Pneumatique</h3>
+                	</a>
+                </dt>
+                <dt>
+                	<a href="<?php echo $this->url(array('controller'=>'service','action'=>'climatisation'),'default',true) ?>">
+	                	<img src="<?php echo $this->baseUrl('image/automonp/clim1.jpg')?>" alt="climatisation voiture"/>
+	                	<h3>Climatisation</h3>
+                	</a>
+                </dt> 
+                <dt>
+                	<a href="<?php echo $this->url(array('controller'=>'service','action'=>'vitrage'),'default',true) ?>">
+	                	<img src="<?php echo $this->baseUrl('image/automonp/vitrage1.jpg')?>" alt="pare-brise vitrage voiture"/>
+	                	<h3>Pare-Brise / Vitrage</h3>
+                	</a>
+                </dt> 
+                <dt>
+                	<a href="<?php echo $this->url(array('controller'=>'service','action'=>'diagnostic'),'default',true) ?>">
+	                	<img src="<?php echo $this->baseUrl('image/automonp/diagnostique1.jpg')?>" alt="diagnostique electronique voiture"/>
+	                	<h3>Diagnostic Electronique</h3>
+                	</a>
+                </dt> 
+                <dt>
+                	<a href="<?php echo $this->url(array('controller'=>'service','action'=>'carrosserie'),'default',true) ?>">
+	                	<img src="<?php echo $this->baseUrl('image/automonp/carrosserie2.jpg')?>" alt="carosserie voiture"/>
+	                	<h3>Carrosserie</h3>
+                	</a>
+                </dt>
+                <dt>
+                	<a href="<?php echo $this->url(array('controller'=>'service','action'=>'immatriculation'),'default',true) ?>">
+	                	<img src="<?php echo $this->baseUrl('image/automonp/immat2.jpg')?>" alt="immatriculation voiture"/>
+	                	<h3>Immatriculation</h3>
+                	</a>
+                </dt>
+                <dt>
+                	<a href="<?php echo $this->url(array('controller'=>'service','action'=>'siv'),'default',true) ?>">
+	                	<img src="<?php echo $this->baseUrl('image/automonp/siv.jpg')?>" alt="certificat d’immatriculation voiture"/>
+	                	<h3>Certificat d’Immatriculation</h3>
+                	</a>
+                </dt> 
+            </dl> 
+
+          </div>
+          
+        </div>
+        
+        <?php echo $this->partial('commun/sidebar.phtml') ?>
+
+      </div>
+    
+    <script>
+	$(function() {
+		$( "#accordion" ).accordion();
+	});
+	</script>
+    

@@ -1,0 +1,182 @@
+<?php if (isset($this->flagEnvoi)): ?>
+<script type="text/javascript"> var displayMessage = true; </script>
+<?php else:?>
+<script type="text/javascript"> var displayMessage = false; </script>
+<?php endif; ?>
+
+<div id="dialog-message" title="Commande Véhicule Neuf" style="display:none;">
+	<p>
+		<span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+		<?php foreach($this->messages as $msg): ?>
+			<div><?php echo $msg; ?></div>
+		<?php endforeach; ?>
+	</p>
+</div>
+
+	
+	<div class="container clearfix">
+    	<div id="default-page" class="main-con">
+        	<div class="title-nav">
+            	<h2 style="background-position:0 -433px">Véhicules Neufs</h2>
+            </div>
+       		<div class="content">
+       			<form name="formVehiculeNeuf" id="formVehiculeNeuf" action="<?php echo $this->url(array('controller'=>'vehicule','action'=>'envoi-mail-vehicule-neuf'),'default',true) ?>" method="post">
+       				<p class="blc-txt">
+						Merci de renseigner les informations nécessaire afin que nous puissons répondre au mieux à votre demande :
+					</p>
+					<div class="elmt-form">
+						<label class="labelForm">Nom <span class="red">*</span></label>
+						<input type=text id="nom" name="nom" value="">
+					</div>
+					<div class="elmt-form">
+						<label class="labelForm">Prenom <span class="red">*</span></label>
+						<input type=text id="prenom" name="prenom" value="">
+					</div>
+					<div class="elmt-form">
+						<label class="labelForm">Email <span class="red">*</span></label>
+						<input type=text id="email" name="email" value="">
+					</div>
+					<div class="elmt-form">
+						<label class="labelForm">Téléphone <span class="red">*</span></label>
+						<input type=text id="telephone" name="telephone" value="">
+					</div>
+
+					<div class="elmt-form">
+						<label class="labelForm">Marque <span class="red">*</span></label>
+						<select id="marque" name="marque">
+							<option value=""></option>
+							<?php foreach($this->optionsMarque as $k => $m): ?>
+							<option value="<?php echo $k ?>"><?php echo $m ?></option>
+							<?php endforeach; ?>
+						</select>
+					</div>
+
+					<div id="listeModele"></div>
+					
+					<div id="formVeh" style="display:none">
+						<div class="elmt-form">
+							<label class="labelForm">Type <span class="red">*</span></label>
+							<select id="type" name="type">
+								<option value=""></option>
+								<?php foreach($this->optionsType as $k => $t): ?>
+								<option value="<?php echo $k ?>"><?php echo $t ?></option>
+								<?php endforeach; ?>
+							</select>
+						</div>
+						<div class="elmt-form">
+							<label class="labelForm">Portes <span class="red">*</span></label>
+							<select id="porte" name="porte">
+								<option value=""></option>
+								<?php foreach($this->optionsPorte as $k => $t): ?>
+								<option value="<?php echo $k ?>"><?php echo $t ?></option>
+								<?php endforeach; ?>
+							</select>
+						</div>
+						<div class="elmt-form">
+							<label class="labelForm">Energie <span class="red">*</span></label>
+							<select id="energie" name="energie">
+								<option value=""></option>
+								<?php foreach($this->optionsEnergie as $k => $e): ?>
+								<option value="<?php echo $k ?>"><?php echo $e ?></option>
+								<?php endforeach; ?>
+							</select>
+						</div>
+						<div class="elmt-form">
+							<label class="labelForm">Transmission <span class="red">*</span></label>
+							<select id="transmission" name="transmission">
+								<option value=""></option>
+								<?php foreach($this->optionsTrans as $k => $tr): ?>
+								<option value="<?php echo $k ?>"><?php echo $tr ?></option>
+								<?php endforeach; ?>
+							</select>
+						</div>
+						<div class="elmt-form">
+							<label class="labelForm">Commentaires</label>
+							<textarea style="vertical-align:middle;" id="commentaires" name="commentaires" cols="50" rows="8"></textarea>
+						</div>
+					</div>
+					
+					<p class="btnSubmit"><input type="submit" value="Commander"></p>
+					
+				</form>
+          </div>
+        </div>
+        
+        <?php echo $this->partial('commun/sidebar.phtml') ?>
+
+	</div>
+
+<script type="text/javascript">
+<!--
+
+if(displayMessage){
+	$( "#dialog:ui-dialog" ).dialog( "destroy" );
+	$( "#dialog-message" ).dialog({
+		modal: true,
+		buttons: {
+			Ok: function() {
+				$( this ).dialog( "close" );
+			}
+		}
+	});
+}
+
+$('#marque').change(function() {
+	$.ajax({
+	  type: 'GET',
+	  url: '<?php echo $this->urlGetListeModeleByMarqueAjax ?>',
+	  data: 'code_marque='+this.value,
+	  success: function(data) {
+	    $('#listeModele').html(data);
+	    $('#formVeh').show();
+	  }
+	});
+});
+
+$(function() {
+	
+	$( "input:submit, a, button", ".btnSubmit" ).button();
+
+	// fORMULAIRE VEHICULE NEUF
+	$("#formVehiculeNeuf").validate({
+	      rules: {
+	         "nom":{
+	            "required": true,
+	         },
+	         "prenom":{
+		        "required": true,
+			 },
+			 "telephone":{
+		        "required": true,
+		        "number":true,
+		     },
+		     "email":{
+		        "required": true,
+		        "email":true,
+		     },
+		     "marque":{
+		        "required": true,
+		     },
+		     "modele":{
+			    "required": true,
+			  },
+			  "type":{
+			     "required": true,
+			  },
+			  "porte":{
+		        "required": true,
+		     },
+		     "energie":{
+			    "required": true,
+			  },
+			  "transmission":{
+			     "required": true,
+			  },
+	      }
+	  });
+	  
+});
+
+//-->
+</script>
+

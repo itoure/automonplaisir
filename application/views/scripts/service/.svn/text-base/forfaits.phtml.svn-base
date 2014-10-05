@@ -1,0 +1,87 @@
+      <div class="container clearfix">
+        <div id="default-page" class="main-con">
+          <div class="title-nav">
+            <h2 style="background-position:0 -279px">Nos Forfaits</h2>
+          </div>
+          <div class="content" style="margin-bottom:50px">
+            <div class="divpic">
+            	<img src="<?php echo $this->baseUrl('image/automonp/forfait-complet.jpg')?>" alt="forfait complet" class="pic"/>
+            	<img src="<?php echo $this->baseUrl('image/automonp/forfait-int.jpg')?>" alt="forfait intermediaire" class="pic"/>
+            	<img src="<?php echo $this->baseUrl('image/automonp/forfait-essentiel.jpg')?>" alt="forfait essentiel" class="pic"/>
+            </div>
+            
+<div>
+
+<div class="demo">
+
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Forfait Complet</a></li>
+		<li><a href="#tabs-2">Forfait Intermediaire</a></li>
+		<li><a href="#tabs-3">Forfait Essentiel</a></li>
+	</ul>
+	<div id="tabs-1">
+		<p>
+		<ul>
+			<li>&bull; VIDANGE MOTEUR</li>
+			<li>&bull; REMPLACEMENT A NEUF DU JOINT DE BOUCHIN DE VIDANGE</li>
+			<li>&bull; REMPLACEMENT DU FILTRE A AIR</li>
+			<li>&bull; REMPLACEMENT DU FILTRE A GAZOLE POUR LES VEHICULES DIESEL ET REMPLACEMENT DES BOUGIES D’ALLUMAGE POUR LES VEHICULES ESSENCE</li>
+			<li>&bull; REMPLACEMENT DU FILTRE A POLLEN SI VOTRE VEHICULE EST EQUIPE DE LA CLIMATISATION</li>
+			<li>&bull; NETTOYAGE FREINS</li>
+			<li>&bull; EQUILIBRAGE 5 ROUES</li>
+			<li>&bull; 135 POINTS DE CONTROLE</li>
+		</ul>
+		</p>
+	</div>
+	<div id="tabs-2">
+		<p>
+			<ul>
+				<li>&bull; VIDANGE MOTEUR</li>
+				<li>&bull; REMPLACEMENT A NEUF DU JOINT DE BOUCHON DE VIDANGE</li>
+				<li>&bull; REMPLACEMENT DU FILTRE A HUILE</li>
+				<li>&bull; REMPLACEMENT DU FILTRE A AIR</li>
+				<li>&bull; 115 POINT DE CONTROLE</li>
+			</ul>
+		</p>
+	</div>
+	<div id="tabs-3">
+		<p>
+			<ul>
+				<li>&bull; VIDANGE MOTEUR</li>
+				<li>&bull; REMPEMENT A NEUF DU JOINT DE BOUCHON DE VIDANGE</li>
+				<li>&bull; REMPLACEMENT DU FILTRE A HUILE</li>
+				<li>&bull; 50 POINLACTS DE CONTROLE</li>
+			</ul>
+		</p>
+	</div>
+</div>
+
+</div><!-- End demo -->
+
+</div>
+
+<p class="blc-txt">
+	PLUS ! A chaque passage de votre véhicule dans notre atelier, AUTOMOBILES MONPLAISIR s’engage à contrôler les niveaux des liquides et de réaliser la mise à niveau si nécessaire !<br/> 
+	<ul>
+		<li>&bull; Lave glace</li>
+		<li>&bull; Liquide de refroidissement</li>
+		<li>&bull; Liquide de freins</li>
+		<li>&bull; etc...</li>
+	</ul>
+</p>
+
+          </div>
+          
+        </div>
+        
+        <?php echo $this->partial('commun/sidebar.phtml') ?>
+
+      </div>
+    
+    <script>
+	$(function() {
+		$( "#tabs" ).tabs();
+	});
+	</script>
+    

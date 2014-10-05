@@ -1,0 +1,82 @@
+      <div class="container clearfix">
+        <div id="default-page" class="main-con">
+          <div class="title-nav">
+            <h2 style="background-position:0 -382px">Certificat d’immatriculation / Carte grise</h2>
+          </div>
+          <div class="content" style="margin-bottom:50px">
+            <div class="divpic">
+            	<img src="<?php echo $this->baseUrl('image/automonp/siv.jpg')?>" alt="certificat d’immatriculation voiture" class="pic"/>
+            	<img src="<?php echo $this->baseUrl('image/automonp/siv2.jpg')?>" alt="certificat d’immatriculation voiture" class="pic"/>
+            </div>
+    
+<p class="blc-txt">
+	Comment se déroule une demande d’immatriculation chez <strong>AUTOMOBILES MONPLAISIR</strong> pour votre véhicule d’occasion ?
+</p>
+
+<div>
+
+<div id="accordion">
+	<h3><a href="#"><strong>Conseils de Pros</strong></a></h3>
+	<div>
+		<p>
+		<b>1.</b> Vous devez vous rendre dans votre garage <strong>AUTOMOBILES MONPLAISIR</strong> muni des
+		pièces suivantes :
+		<p> <span class="blue">&bull;</span> Pièce d’identité</p>
+		<p> <span class="blue">&bull;</span> Justificatif de domicile de moins de 6 mois à votre nom.</p>
+		En cas de justificatif établi au nom d’un tiers, vous devez également présenter les
+		documents suivants :
+		- Attestation d’hébergement,
+		- Pièce d’identité de l'hébergeant,
+		- Document officiel émanant de l'administration et montrant la réalité de la
+		résidence du demandeur au domicile de l'hébergeant (attestation sécurité sociale,
+		attestation allocations familiales, carte de demandeur d'emploi,...).
+		<p> <span class="blue">&bull;</span> Déclaration de cession ou certificat de cession du véhicule concerné.
+		<p> <span class="blue">&bull;</span> Carte grise de l’ancien titulaire avec mention “vendu le...” et la signature de
+		l’ancien propriétaire.</p>
+		<p> <span class="blue">&bull;</span> Le justificatif du contrôle technique de moins de 6 mois (pour les véhicules de
+		plus de 4 ans)</p>
+		</p><br/>
+		<p><b>2.</b> Vous complétez et signez une demande de certificat d’immatriculation d’un
+		véhicule et un mandat pour effectuer les formalités d’immatriculation.</p><br/>
+		
+		<p><b>3.</b> Vous réglez directement le coût de la carte grise incluant les taxes, les frais de
+		dossier et les frais d’envoi revenant à l’Etat (règlement uniquement par carte
+		bleue ou en espèces).</p><br/>
+		
+		<p><b>4.</b> Vous réglez à votre garage <strong>AUTOMOBILES MONPLAISIR</strong> les frais attachés à la
+		demande de la carte grise ainsi que la fourniture des plaques et la pose.</p><br/>
+		
+		<p><b>5.</b> Votre garage <strong>AUTOMOBILES MONPLAISIR</strong> vous remet un certificat provisoire
+		d’immatriculation (sauf si le véhicule est déjà équipé de nouvelles plaques) sur
+		lequel apparaît votre numéro définitif et pose vos plaques.</p><br/>
+		
+		<p><b>6.</b> Le Certificat Provisoire est valable 1 mois. Vous recevez directement de
+		l’administration à votre domicile votre nouvelle carte grise (délai moyen : 1
+		semaine).</p>
+	</div>
+</div>
+
+</div>
+
+<p class="blc-txt">
+	<i>* Certaines opérations spécifiques telles que : immatriculation de véhicules d’imports, véhicule de collection, véhicules diplomatiques, changements d’état civil et d’adresse, modifications des caractéristiques du véhicules, demande de duplicata... ne peuvent être réalisées qu’en Préfecture.</i>
+</p>
+
+
+        
+
+
+          </div>
+          
+        </div>
+        
+        <?php echo $this->partial('commun/sidebar.phtml') ?>
+
+      </div>
+    
+    <script>
+	$(function() {
+		$( "#accordion" ).accordion();
+	});
+	</script>
+    

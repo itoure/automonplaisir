@@ -1,0 +1,58 @@
+        <div class="sidebar">
+          <div id="bloc-sidebar-rdv">
+            <div class="title-nav">
+              <h2>Demande RDV</h2>
+            </div>
+            <div class="con" style="text-align: center;">
+            	<a href="<?php echo $this->url(array(),'rendezvous',true) ?>">
+					<img class="pic-rdv" src="<?php echo $this->baseUrl('image/automonp/pic-rdv.jpg')?>" alt="demande rendez-vous" />
+				</a>
+	              <p class="demo">
+	              	<a href="<?php echo $this->url(array(),'rendezvous',true) ?>">Demande RDV en Ligne</a>
+	              </p>
+            </div>
+          </div>
+          <div id="bloc-sidebar-plus">
+            <div class="title-nav">
+              <h2>Nos Plus</h2>
+            </div>
+            <div class="con">
+              <ul>
+                <li><a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">&bull; Devis Personnalisés</a></li>
+                <li><a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">&bull; Rapidité d'Intervention</a></li>
+                <li><a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">&bull; Conseils Personnalisés</a></li>
+                <li><a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">&bull; Choix de Pneumatiques</a></li>
+                <li><a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">&bull; Garantie des Pièces</a></li>
+           		<li><a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">&bull; Prêt de Véhicules</a></li>
+           		<li><a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">&bull; Jusqu'à 4 fois SANS FRAIS</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="bloc-sidebar">
+            <div class="title-nav">
+              <h2>Nous Localiser</h2>
+            </div>
+				<div class="con" style="text-align: center;">
+					<a href="<?php echo $this->url(array(),'plan',true) ?>">
+						<img class="pic-map" src="http://maps.googleapis.com/maps/api/staticmap?center=45.74357,4.86536&zoom=10&size=175x100&sensor=false" alt="carte garage automobiles monplaisir lyon" />
+					</a>
+          		</div>
+          </div>
+          <div id="bloc-sidebar" style="display: none;">
+            <div class="title-nav">
+              <h2>Promotion</h2>
+            </div>
+            <div class="con">
+              <ul>
+                <li>April 2010</li>
+                <li>February 2010</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <script>
+	    $(function() {
+			$( "input:submit, a, button", ".demo" ).button();
+		});
+		</script>

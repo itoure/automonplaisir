@@ -1,0 +1,9 @@
+<div class="elmt-form">
+	<label class="labelForm"><?php echo $this->label ?> <span class="red">*</span></label>
+	<select id="modele" name="modele">
+		<option value=""></option>
+		<?php foreach($this->optionsModele as $k => $m): ?>
+		<option value="<?php echo $k ?>"><?php echo $m ?></option>
+		<?php endforeach; ?>
+	</select>
+</div>

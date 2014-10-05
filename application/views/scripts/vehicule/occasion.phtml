@@ -1,0 +1,71 @@
+<div class="container clearfix">
+
+	<div id="default-page" class="main-con">
+		<div class="title-nav">
+			<h2 style="background-position:0 -433px">Véhicules d'Occasions</h2>
+		</div>
+		<div class="content">
+			<?php if(!$this->listeVehOccasion):?>
+				<div>Aucun véhicule disponible pour le moment...</div>
+			<?php else:?>
+			<table border="2" class="table-occasion">
+				<thead class="thead-occasion">
+					<tr>
+						<th style="width:172px">Photo</th>
+						<th>Marque/Gamme</th>
+						<th>Prix</th>
+						<th>Km</th>
+						<th>Energie</th>
+						<th>Année</th>
+						<th></th>
+					</tr>
+				</thead>
+				
+				
+				<?php foreach ($this->listeVehOccasion as $veh): ?>
+				<tbody class="tbody-occasion">
+					<tr>
+						<td>
+						<a href="<?php echo $this->url(array('controller'=>'vehicule','action'=>'detail','id'=>$veh['id_occasion']),'default',true) ?>">
+							<?php if(empty($veh['main_photo'])):?>
+							<img src="<?php echo $this->baseUrl('image/logo-automonp-multi.jpg')?>" alt="logo automobiles monplaisir"/>
+							<?php else:?>
+							<img src="<?php echo $this->baseUrl('image/voiture-occasion/photos/'.$veh['main_photo'])?>" alt="<?php echo $veh['libMarque']." - ".$veh['libModele'] ?>"/>
+							<?php endif;?>
+						</a>
+						</td>
+						<td>
+							<img style="margin-bottom:10px;width:40px" src="<?php echo $this->baseUrl('image/voiture-occasion/logo-marque/'.strtolower($veh['libMarque']))?>" alt="<?php echo "logo marque ".$veh['libMarque'] ?>"/><br/>
+							<?php echo $veh['libMarque'].' / '.$veh['libModele'] ?>
+						</td>
+						<td><?php echo $veh['prix'] ?> €</td>
+						<td><?php echo $veh['kilometrage'] ?> Km</td>
+						<td><?php echo $veh['libEnergie'] ?></td>
+						<td><?php echo $veh['annee'] ?></td>
+						<td class="detail-occasion"><a href="<?php echo $this->url(array('controller'=>'vehicule','action'=>'detail','id'=>$veh['id_occasion']),'default',true) ?>">Détail</a></td>
+					</tr>
+				</tbody>
+				<?php endforeach; ?>
+			
+			
+			</table>
+			<?php endif;?>
+			
+		</div>
+	</div>
+        
+	<?php echo $this->partial('commun/sidebar.phtml') ?>
+
+</div>
+
+
+<script type="text/javascript">
+<!--
+
+$(function() {
+	$( "a", ".detail-occasion" ).button();
+});
+
+//-->
+</script>
+

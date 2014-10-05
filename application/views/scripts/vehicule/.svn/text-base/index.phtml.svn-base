@@ -1,0 +1,62 @@
+      <div class="container clearfix">
+        <div id="default-page" class="main-con">
+          
+          <div class="title-nav">
+            <h2 style="background-position:0 -433px">Véhicules d'Occasions</h2>
+          </div>
+          <div class="content">
+            <div class="divpic">
+            	<a href="<?php echo $this->url(array('controller'=>'vehicule','action'=>'occasion'),'default',true) ?>"><img src="<?php echo $this->baseUrl('image/automonp/occasion.jpg')?>" alt="voiture occasion" class="pic-solo"/></a>
+            </div>
+              	<p class="blc-txt">
+	              	Venez découvrir les véhicules d’occasions de toutes marques que nous vendons. Nous proposons
+					tous types de véhicules de tourisme (Berline, Monospace, 4X4, etc …) et des véhicules utilitaires/
+					camionnettes. Vous pouvez consulter notre catalogue en ligne ou vous rendre directement chez
+					<strong>AUTOMOBILES MONPLAISIR.</strong> Nous pouvons également rechercher un véhicule d’occasion sur
+					demande.
+				</p>
+				
+				<p class="blc-txt">
+					Tous les véhicules d’occasions proposés à la vente, sont munis d’un carnet d’entretien à jour et sont
+					vendus avec une garantie panne mécanique d’au moins 3 mois. Reprise possible de votre ancien véhicule.
+				</p>
+				
+              <div class="center demo">
+             	<a class="link-rub-veh" href="<?php echo $this->url(array('controller'=>'vehicule','action'=>'occasion'),'default',true) ?>">Voir nos véhicules</a>
+             </div>
+          </div>
+          
+          
+          <p class="blc-txt"></p>
+          
+          <div class="title-nav">
+            <h2 style="background-position:0 -433px">Véhicules Neufs</h2>
+          </div>
+          <div class="content" style="margin-bottom:50px">
+            <div class="divpic">
+            	<a href="<?php echo $this->url(array('controller'=>'vehicule','action'=>'neuf'),'default',true) ?>"><img src="<?php echo $this->baseUrl('image/automonp/neuf.jpg')?>" alt="voiture neuf" class="pic-solo"/></a>
+            </div>
+              <p class="blc-txt">
+              	Nous proposons des véhicules neufs, toutes marques, disponibles chez nos différents fournisseurs
+				(concessionnaires : Renault, Peugeot, Citroen, Ford, etc…). Pour toutes demandes vous pouvez vous
+				rendre dans nos locaux ou nous faire nous parvenir une demande selon vos critères. Nous mettons à
+				votre disposition notre savoir faire pour vous satisfaire dans les meilleurs conditions. Reprise possible de votre ancien véhicule
+              </p>
+             <div class="center demo">
+             	<a class="link-rub-veh" href="<?php echo $this->url(array('controller'=>'vehicule','action'=>'neuf'),'default',true) ?>">Commander un véhicule</a>
+             </div>
+          </div>
+          
+          
+          
+        </div>
+        
+        <?php echo $this->partial('commun/sidebar.phtml') ?>
+
+      </div>
+    
+    <script>
+    $(function() {
+		$( "input:submit, a, button", ".demo" ).button();
+	});
+	</script>

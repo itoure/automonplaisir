@@ -1,0 +1,40 @@
+<div class="siteintro-wrap">
+  <div id="siteintro" class="mod-con clearfix">
+    <dl class="about-us">
+      <dt>Atelier</dt>
+      <dd><a href="<?php echo $this->url(array('controller'=>'service','action'=>'entretien'),'default',true) ?>">Entretien &amp; Revision</a></dd>
+      <dd><a href="<?php echo $this->url(array('controller'=>'service','action'=>'mecanique'),'default',true) ?>">Mécanique</a></dd>
+      <dd><a href="<?php echo $this->url(array('controller'=>'service','action'=>'pneumatique'),'default',true) ?>">Pneumatique</a></dd>
+      <dd><a href="<?php echo $this->url(array('controller'=>'service','action'=>'climatisation'),'default',true) ?>">Climatisation</a></dd>
+      <dd><a href="<?php echo $this->url(array('controller'=>'service','action'=>'vitrage'),'default',true) ?>">Pare-Brise &amp; Vitrage</a></dd>
+      <dd><a href="<?php echo $this->url(array('controller'=>'service','action'=>'diagnostic'),'default',true) ?>">Diagnostic Electronique</a></dd>
+    </dl>
+    <dl class="categories">
+      <dt>Pratique</dt>
+      <dd><a href="<?php echo $this->url(array(),'apropos',true) ?>">A Propos de Nous</a></dd>
+      <dd><a href="<?php echo $this->url(array(),'contact',true) ?>">Contactez-Nous</a></dd>
+      <dd><a href="<?php echo $this->url(array(),'rendezvous',true) ?>">Demande de Rendez-Vous</a></dd>
+      <dd><a href="<?php echo $this->url(array(),'plan',true) ?>">Plan d'Accès</a></dd>
+    </dl>
+    <dl class="categories">
+      <dt>Nos Plus</dt>
+      <dd><a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">Devis Personnalisés</a></dd>
+      <dd><a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">Rapidité d'Intervention</a></dd>
+      <dd><a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">Conseils Personnalisés</a></dd>
+      <dd><a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">Grand Choix de Pneumatiques</a></dd>
+      <dd><a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">Garantie des Pièces</a></dd>
+      <dd><a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">Prêt de Véhicules GRATUIT</a></dd>
+      <dd><a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">Paiement jusqu'à 4 fois SANS FRAIS</a></dd>
+    </dl>
+  </div>
+</div>
+<div class="footer-wrap">
+  <div id="footer" class="mod-con">
+    <div class="copyright">&copy; 2012 Site Officiel <a href="<?php echo $this->url(array(),'default',true) ?>"><strong>Garage Automobiles Monplaisir</strong></a></div>
+    <div class="links">
+    	<a href="<?php echo $this->url(array(),'plan',true) ?>">Plan d'Accès</a> | 
+    	<a href="<?php echo $this->url(array(),'rendezvous',true) ?>">Demande de Rendez-Vous en Ligne</a> | 
+    	<a href="<?php echo $this->url(array(),'contact',true) ?>">Contactez-Nous</a>
+    </div>
+  </div>
+</div>

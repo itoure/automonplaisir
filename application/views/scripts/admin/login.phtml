@@ -1,0 +1,43 @@
+
+<form id="formLogin" name="formLogin" action="<?php echo $this->url(array('controller'=>'admin','action'=>'connexion'),'default',true) ?>" method="post">
+<div class="center">
+	<div class="box-login">
+		
+		<div class="elmt-form">
+			<label class="labelForm">Login <span class="red">*</span></label> 
+			<input type="text" name="login" id="login" value="">
+		</div>
+		<div class="elmt-form">
+			<label class="labelForm">Password <span class="red">*</span></label> 
+			<input type="password" name="pass" id="pass" value="">
+		</div>
+		<p class="btnSubmit"><input type="submit" value="Connexion"></p>
+		
+	</div>
+</div>
+</form>
+
+
+<script type="text/javascript">
+<!--
+
+$(function() {	
+  
+	$("input:submit", ".btnSubmit").button();
+	
+	// fORMULAIRE CONTACT
+	$("#formLogin").validate({
+	      rules: {
+	         "login":{
+	            "required": true,
+	         },
+	         "pass":{
+		        "required": true,
+			 },
+	      }
+	  });
+		
+});
+
+//-->
+</script>

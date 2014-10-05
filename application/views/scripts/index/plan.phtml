@@ -1,0 +1,69 @@
+<script type="text/javascript">
+
+  function initializeGmap() {
+    var latlng = new google.maps.LatLng(45.74357, 4.86536);
+    var myOptions = {
+      zoom: 15,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map"),
+        myOptions);
+    
+    var marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        animation: google.maps.Animation.DROP
+    });
+
+  }
+
+</script>
+
+<div class="title-bloc">Plan d'Accès</div>
+
+<div class="bloc-plan-g">
+	<div class="map_plan" id="map" style="width:400px; height:400px"></div>
+	
+	<!--
+	<div class="elmt-form">
+		<label class="labelForm">Adresse</label>
+		<input type=text id="nom" name="" value="" size="30">
+	</div>
+	<div class="elmt-form">
+		<label class="labelForm">Ville</label>
+		<input type=text id="prenom" name="" value="">
+	</div>
+	<div class="elmt-form">
+		<label class="labelForm">Code Postal</label>
+		<input type=text id="email" name="" value="">
+	</div>
+	<div class="elmt-form">
+		<label class="labelForm">Pays</label>
+		<input type=text id="email" name="" value="France" disabled>
+	</div>
+	<div class="elmt-form" style="margin-top:15px; text-align:center">
+		<input onclick="" type="button" value="Itnéraire">
+	</div> 
+	-->
+</div>
+
+<div class="bloc-plan-d">
+	<div style="margin-bottom:20px">
+		<p class="blc-txt">
+	       	<ul>
+				<li style="width:345px;font-size:14px;"><strong>Garage AUTOMOBILES MONPLAISIR - Lyon</strong></li>
+				<li>42 Rue Villon (angle rue St Nestor)</li>
+				<li>69008, Lyon</li>
+				<li>Tél: 04 78 76 80 80</li>
+				<li>Fax: 04 78 76 65 78</li>
+				<li>Email: contact@automonplaisir.fr</li>
+			</ul>
+		</p>
+		<img src="<?php echo $this->baseUrl('image/automonp/horaires.jpg')?>" alt="horaires garage automobiles monplaisir" class="pic-horaire"/>
+	</div>
+</div>
+
+<script type="text/javascript">
+	initializeGmap();
+</script>

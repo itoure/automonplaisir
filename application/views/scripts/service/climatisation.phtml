@@ -1,0 +1,47 @@
+      <div class="container clearfix">
+        <div id="default-page" class="main-con">
+          <div class="title-nav">
+            <h2 style="background-position:0 -382px" >Climatisation</h2>
+          </div>
+          <div class="content" style="margin-bottom:50px">
+         			
+            <div class="divpic">
+            <img src="<?php echo $this->baseUrl('image/automonp/clim1.jpg')?>" alt="climatisation voiture" class="pic"/>
+            <img src="<?php echo $this->baseUrl('image/automonp/clim3.jpg')?>" alt="climatisation voiture" class="pic"/>
+            </div>
+			
+			<div>
+				<p class="blc-txt">
+					Savez-vous que votre climatisation doit être entretenue pour garder son efficacité et aussi pour protéger l’environnement ?<br/>
+					Un entretien régulier permet de restituer à votre climatisation toute sa puissance de refroidissement et de la débarrasser des odeurs désagréables qui peuvent apparaître dans le véhicule.
+				</p>
+				
+				<div id="accordion">
+					<h3><a href="#"><strong>Conseils de Pros</strong></a></h3>
+					<div>
+						<p>
+						<span class="blue">&bull;</span> Le niveau de charge de gaz étant important pour le bon fonctionnement de la climatisation, il faut le faire
+						contrôler tous les ans.</p><br/>
+						<p><span class="blue">&bull;</span> Faites remplacer le filtre d’habitacle tous les ans ou tous les 15 000 km et plus souvent si le véhicule circule
+						dans un environnement poussiéreux.</p><br/>
+						<p><span class="blue">&bull;</span> Procédez à la désinfection des conduits d’aération dès qu’une légère odeur désagréable se dégage des
+						aérateurs et remplacez le filtre d’habitacle à cette occasion.</p>
+						</p>
+					</div>
+				</div>
+			</div>
+
+
+          </div>
+          
+        </div>
+        
+        <?php echo $this->partial('commun/sidebar.phtml') ?>
+
+      </div>
+      
+      <script>
+		$(function() {
+			$( "#accordion" ).accordion();
+		});
+	  </script>

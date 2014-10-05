@@ -1,0 +1,77 @@
+
+      <ul id="home-con" class="clearfix">
+      
+        <li class="li-revision">
+          <div class="title-nav">
+            <h2>
+            	<a href="<?php echo $this->url(array('controller'=>'service','action'=>'entretien'),'default',true) ?>">
+            	La Révision
+            	</a>
+            </h2>
+          </div>
+          <dl class="bloc-revision">
+          	<dt><span class="blue">&bull;</span> <a href="<?php echo $this->url(array('controller'=>'service','action'=>'entretien'),'default',true) ?>">Entretien selon les normes constructeurs</a></dt>
+			<dt><span class="blue">&bull;</span> <a href="<?php echo $this->url(array('controller'=>'service','action'=>'entretien'),'default',true) ?>">Garantie constructeur préservée <small>(Hors extensions contractuelles)</small></a></dt>
+			<dt><span class="blue">&bull;</span> <a href="<?php echo $this->url(array('controller'=>'service','action'=>'entretien'),'default',true) ?>">Normes d’huiles constructeurs respectées</a></dt>
+			<dt><span class="blue">&bull;</span> <a href="<?php echo $this->url(array('controller'=>'service','action'=>'entretien'),'default',true) ?>">Contrôle des niveaux et autres points</a></dt>
+			<dt><span class="blue">&bull;</span> <a href="<?php echo $this->url(array('controller'=>'service','action'=>'entretien'),'default',true) ?>">Diagnostic électronique multimarque</a></dt>
+			<dt><span class="blue">&bull;</span> <a href="<?php echo $this->url(array('controller'=>'service','action'=>'entretien'),'default',true) ?>">Préparation des véhicules avant restitution</a></dt>
+			<dt style="margin:0;text-align: center">
+				<a href="<?php echo $this->url(array('controller'=>'service','action'=>'entretien'),'default',true) ?>">
+					<img style="width:100px" src="<?php echo $this->baseUrl('image/automonp/qualite.png')?>" alt="la revision">
+				</a>
+			</dt>
+		</dl>
+
+        </li>
+        
+
+        <li class="li-revision">
+          <div class="title-nav">
+            <h2><a href="<?php echo $this->url(array('controller'=>'service','action'=>'controle'),'default',true) ?>">
+            Le Contrôle Technique
+            </a></h2>
+          </div>
+          <dl class="bloc-ct">
+			
+          	<dt><span class="blue">&bull;</span> <a href="<?php echo $this->url(array('controller'=>'service','action'=>'controle'),'default',true) ?>">Bilan visuel avant passage au contrôle technique avec détection préalable des points de contre-visite</a></dt>
+			<dt><span class="blue">&bull;</span> <a href="<?php echo $this->url(array('controller'=>'service','action'=>'controle'),'default',true) ?>">Contre-visite gratuite dans un délai de 2 mois</a></dt>
+			<dt><span class="blue">&bull;</span> <a href="<?php echo $this->url(array('controller'=>'service','action'=>'controle'),'default',true) ?>">Convoyage gratuit de votre véhicule au centre de contrôle technique</a></dt>
+			<dt><span class="blue">&bull;</span> <a href="<?php echo $this->url(array('controller'=>'service','action'=>'controle'),'default',true) ?>">Devis de remise en état le cas échéant avant le passage de votre véhicule au contrôle technique</a></dt>
+			<dt style="text-align: center">
+				<a href="<?php echo $this->url(array('controller'=>'service','action'=>'controle'),'default',true) ?>">
+					<img style="width:100px" src="<?php echo $this->baseUrl('image/automonp/pictoct.png')?>" alt="contrôle technique">
+				</a>
+			</dt>
+          </dl>
+        </li>
+        
+        <li class="li-revision">
+          <div class="title-nav">
+            <h2>
+            <a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">Nos Services <span class="plus">+</span></a></h2>
+          </div>
+          <dl class="bloc-nos-plus">
+            <dt class="pic" style="display:none"><img src="<?php echo $this->baseUrl('image/voiture/qualite.jpg')?>" alt="qualite"></dt>
+            <dt><span class="blue">&bull;</span> <a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">Devis Personnalisés</a></dt>
+            <dt><span class="blue">&bull;</span> <a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">Rapidité d'Intervention</a></dt>
+            <dt><span class="blue">&bull;</span> <a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">Conseils Personnalisés</a></dt>
+            <dt><span class="blue">&bull;</span> <a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">Grand Choix de Pneumatiques</a></dt>
+            <dt><span class="blue">&bull;</span> <a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">Garantie des Pièces</a></dt>
+            <dt><span class="blue">&bull;</span> <a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">Prêt de Véhicules</a></dt>
+            <dt><span class="blue">&bull;</span> <a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">Paiement jusqu'à 4 fois SANS FRAIS</a></dt>
+			<dt style="text-align: center">
+				<a href="<?php echo $this->url(array('controller'=>'service','action'=>'plus'),'default',true) ?>">
+					<img style="width:100px" src="<?php echo $this->baseUrl('image/automonp/servplus.png')?>" alt="nos services plus">
+				</a>
+			</dt>
+          </dl>
+        </li>
+      </ul>
+     
+      <script>
+	    $(function() {
+			$( "a", ".btn" ).button();
+		});
+	</script>
+	
