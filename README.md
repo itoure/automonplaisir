@@ -1,1 +1,1 @@
-Le garage Automobiles Monplaisir à Lyon 8 vous accueille dans son atelier pour toutes réparations : mécanique, pneumatique, climatisation, pare-brise, carrosserie. Nous proposons également l'entretien et la révision de votre véhicule et la vente de véhicules neufs ou d'occasions.
+Le garage Automobiles Monplaisir à Lyon 8 vous accueille dans son atelier pour toutes réparations : mécanique, pneumatique, climatisation, pare-brise, carrosserie, etc... Nous proposons également l'entretien et la révision de votre véhicule et la vente de véhicules neufs ou d'occasions.
